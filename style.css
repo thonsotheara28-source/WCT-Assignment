@@ -28,6 +28,13 @@
 
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    background: var(--primary-color);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -73,13 +80,6 @@ img {
     background: var(--secondary-color);
 }
 
-header {
-    position: fixed;
-    width: 100%;
-    z-index: 5;
-    background: var(--primary-color);
-}
-
 section {
     scroll-margin-top: 80px;
 }
@@ -105,6 +105,11 @@ header .navbar {
     border-radius: 6px;
     border: 1px solid #FFFFFF;
     margin-right: 0px;
+}
+
+.nav-link .active {
+    background: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .navbar .nav-logo .logo-text {
@@ -140,6 +145,7 @@ header .navbar {
 }
 
 .hero-section {
+    padding-top: 90px;
     min-height: 100vh;
     background: var(--primary-color);
 }
@@ -210,6 +216,11 @@ header .navbar {
     background: var(--light-pink-color);
 }
 
+.testimonials-section, .gallery-section, .contact-section, .menu-section,
+.about-section {
+    min-height: 100vh;
+}
+
 .about-section .section-content {
     display: flex;
     gap: 50px;
@@ -218,10 +229,10 @@ header .navbar {
 }
 
 .about-section .about-image-wrapper .about-image {
-    width: 400px;
-    height: 400px;
+    display: flex;
     object-fit:cover;
     min-height: 400px;
+    max-width: 400px;
     border-radius: var(--border-radius-circle);
 }
 
